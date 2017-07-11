@@ -102,8 +102,8 @@ void Init_DMA_Streams(void)
 
 
 	DMA_ITConfig(DMA2_Stream0, DMA_IT_HT | DMA_IT_TC, ENABLE);
-	DMA_ITConfig(DMA1_Stream2, DMA_IT_HT | DMA_IT_TC, ENABLE);
-	DMA_ITConfig(DMA1_Stream3, DMA_IT_HT | DMA_IT_TC, ENABLE);
+	//DMA_ITConfig(DMA1_Stream2, DMA_IT_HT | DMA_IT_TC, ENABLE);
+	//DMA_ITConfig(DMA1_Stream3, DMA_IT_HT | DMA_IT_TC, ENABLE);
 }
 
 /* Инициализация обр. прерываний для половинного и полного
@@ -119,10 +119,10 @@ void Init_EXTI_for_DMA(void)
  	Nvic_Initstruct.NVIC_IRQChannelSubPriority = 0x01;
  	Nvic_Initstruct.NVIC_IRQChannelCmd = ENABLE;
  	NVIC_Init(&Nvic_Initstruct);
- 	Nvic_Initstruct.NVIC_IRQChannel = DMA1_Stream2_IRQn;
+ 	/*Nvic_Initstruct.NVIC_IRQChannel = DMA1_Stream2_IRQn;
  	NVIC_Init(&Nvic_Initstruct);
  	Nvic_Initstruct.NVIC_IRQChannel = DMA1_Stream3_IRQn;
- 	NVIC_Init(&Nvic_Initstruct);
+ 	NVIC_Init(&Nvic_Initstruct);*/
 }
 
 /* Инициализация TIM10 для генерации CKc (main clock).
@@ -137,13 +137,13 @@ void Init_CKc_CKr(void){
 
 	uint32_t Period_CKc, Duty_CKc, Period_CKr, Duty_CKr;
 
-	/*
-	 * Временно для тактирования ADC без линеек
-	 */
-	Period_CKc = (SystemCoreClock/2) / 2000000; //(SystemCoreClock / 4000000) * 2 ;
+	//Период задается в тактах контроллера по формуле :
+	//Период = (Частота контр. / делитель частоты на шине) / желаемая частота периода.
+	//Внимание на делитель частоты перед таймером.
+	Period_CKc = (SystemCoreClock/4) / 1000000;
 	Duty_CKc = (5 * Period_CKc / 10);
-	Period_CKr = (Period_CKc * 1100) - 1;
-	Duty_CKr = (Period_CKc * 1032) - 1;
+	Period_CKr = ((Period_CKc + 1) * 1100) - 1;
+	Duty_CKr = ((Period_CKc + 1) * 1032) - 1;
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM10, ENABLE);
@@ -161,7 +161,7 @@ void Init_CKc_CKr(void){
 	//Configuration of CKc.
 	TIM_TimeBaseStructInit(&Tim_Initstruct);
 	Tim_Initstruct.TIM_Period = Period_CKc;
-	Tim_Initstruct.TIM_Prescaler = 0x01;
+	Tim_Initstruct.TIM_Prescaler = 0x03;
 	TIM_TimeBaseInit(TIM10, &Tim_Initstruct);
 
 	TIM_OCStructInit(&Tim_OCInitStruct);
@@ -173,7 +173,7 @@ void Init_CKc_CKr(void){
 	//Configuration of CKr.
 	TIM_TimeBaseStructInit(&Tim_Initstruct);
 	Tim_Initstruct.TIM_Period = Period_CKr;
-	Tim_Initstruct.TIM_Prescaler = 0x01;
+	Tim_Initstruct.TIM_Prescaler = 0x03;
 	TIM_TimeBaseInit(TIM11, &Tim_Initstruct);
 
 	TIM_OCStructInit(&Tim_OCInitStruct);
@@ -181,6 +181,7 @@ void Init_CKc_CKr(void){
 	Tim_OCInitStruct.TIM_OutputState = ENABLE;
 	Tim_OCInitStruct.TIM_Pulse = Duty_CKr;
 	TIM_OC1Init(TIM11, &Tim_OCInitStruct);
+
 }
 
 /* Запуск тактирования CKc & CKr.
@@ -200,53 +201,3 @@ void Stop_Pulse(void){
 	TIM11->CR1 &= (uint16_t)~TIM_CR1_CEN;
 }
 
-/* Функция для отправки данных по Ethernet.
- *
- */
-void Send_Data_to_Ethernet(struct tcp_pcb *pPCB, uint32_t * pBuffer, uint32_t buffer_size)
-{
-		tcp_write(pPCB, pBuffer, buffer_size, 1);
-		tcp_output(pPCB);
-}
-
-void LCD_LED_Init(void)
-{
-  /* Initialize STM324xG-EVAL's LEDs */
-  STM_EVAL_LEDInit(LED5);
-  STM_EVAL_LEDInit(LED6);
-  STM_EVAL_LEDInit(LED3);
-  STM_EVAL_LEDInit(LED4);
-}
-
-/* Тестовое прерывание, пока не используется PE12.
- *
- */
-void Init_EXTI_12(void)
-{
-	GPIO_InitTypeDef GPIO_InitStruct;
-	EXTI_InitTypeDef EXTI_InitStruct;
-	NVIC_InitTypeDef NVIC_InitStruct;
-
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
-
-	GPIO_StructInit(&GPIO_InitStruct);
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_DOWN;
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_12;
-	GPIO_Init(GPIOE, &GPIO_InitStruct);
-
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE , EXTI_PinSource12);
-
-	EXTI_InitStruct.EXTI_Line = EXTI_Line12;
-	EXTI_InitStruct.EXTI_Mode = EXTI_Mode_Interrupt;
-	EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
-	EXTI_InitStruct.EXTI_LineCmd = ENABLE;
-	EXTI_Init(&EXTI_InitStruct);
-
-	NVIC_InitStruct.NVIC_IRQChannel = EXTI15_10_IRQn;
-	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0x01;
-	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0x01;
-	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&NVIC_InitStruct);
-}

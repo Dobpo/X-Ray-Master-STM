@@ -1,7 +1,4 @@
-#include "stm32f4x7_eth.h"
-#include "netconf.h"
 #include "main.h"
-#include "tcp_echoserver.h"
 
 /* Private define ------------------------------------------------------------*/
 #define SYSTEMTICK_PERIOD_MS  10
@@ -14,30 +11,15 @@ uint32_t timingdelay;
   */
 int main(void)
 {
-	SystemInit();
+	SystemInit(); Init_CKc_CKr(); Start_Pulse(); Stop_Pulse();
+	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();
 
-	/* configure ethernet & init ethernet*/
-	ETH_BSP_Config();LwIP_Init();tcp_echoserver_init();LCD_LED_Init();
-
-	/*config & init periphial*/
-	Init_SPIs();
-	Init_DMA_Streams();
-	Init_EXTI_for_DMA();
-	Init_EXTI_12();
-	Init_CKc_CKr();
 
 	/* Infinite loop */
 	while (1)
 	{
-		/* check if any packet received */
-		if (ETH_CheckFrameReceived())
-		{
-			/* process received ethernet packet */
-			LwIP_Pkt_Handle();
-		}
-		/* handle periodic timers for LwIP */
-		LwIP_Periodic_Handle(LocalTime);
-  }
+
+	}
   return 0;
 }
 
@@ -56,15 +38,3 @@ void Delay(uint32_t nCount)
   {
   }
 }
-
-/**
-  * @brief  Updates the system local time
-  * @param  None
-  * @retval None
-  */
-void Time_Update(void)
-{
-  LocalTime += SYSTEMTICK_PERIOD_MS;
-}
-
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

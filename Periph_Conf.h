@@ -6,8 +6,6 @@
 #endif
 
 #include "stm32f4xx.h"
-#include "tcp_echoserver.h"
-#include "stm32f4_discovery.h"
 
 #define Buffer_Lenght 768
 
@@ -29,9 +27,7 @@ void Init_DMA_Streams(void);
 void Init_EXTI_for_DMA(void);
 //EXTI
 void Init_EXTI_12(void);
-//Functions
-void Send_Data_to_Ethernet(struct tcp_pcb *pPCB, uint32_t * pBuffer, uint32_t buffer_size);
-void LCD_LED_Init(void);
+
 #ifdef __cplusplus
 }
 #endif
