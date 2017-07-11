@@ -1,5 +1,17 @@
 #include "Periph_Conf.h"
 
+/* Отправка одного слова данных
+ * */
+void Send_Data(uint16_t data){
+	GPIOE->BSRRH = OutMask;    // Чистим линии данных
+	Data = (data << 4) | RDY;
+
+	rdStart = GPIOD->IDR & BusY;    // Ждем низкий уровень BusY
+	while (rdStart != 0) rdStart = GPIOD->IDR & BusY;
+	GPIOE->BSRRL = Data; // Устанавливаем данные на линии
+	GPIOE->BSRRH = RDY;        //  DataRdy = 0 (Защелкиваем данные)
+}
+
 /* Инициализация SPIx (1,2,3) для приема данных
  * с Slave контроллеров. SPI настроен в режиме Slave.
  *
@@ -181,7 +193,6 @@ void Init_CKc_CKr(void){
 	Tim_OCInitStruct.TIM_OutputState = ENABLE;
 	Tim_OCInitStruct.TIM_Pulse = Duty_CKr;
 	TIM_OC1Init(TIM11, &Tim_OCInitStruct);
-
 }
 
 /* Запуск тактирования CKc & CKr.
@@ -200,4 +211,48 @@ void Stop_Pulse(void){
 	TIM10->CR1 &= (uint16_t)~TIM_CR1_CEN;
 	TIM11->CR1 &= (uint16_t)~TIM_CR1_CEN;
 }
+
+/* Иниц. портов PE и PD для использования в виде паралельной шины данных
+ * и упр. сигналов + светодиоды для kitDiscovery.
+ * */
+void Init_pData_Bus(void){
+	GPIO_InitTypeDef Gpio_InitStruct;
+
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD | RCC_AHB1Periph_GPIOE, ENABLE);
+
+	//Светодиоды
+	GPIO_StructInit(&Gpio_InitStruct);
+	Gpio_InitStruct.GPIO_Pin  = LedMask;
+	Gpio_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
+	GPIO_Init(GPIOD, &Gpio_InitStruct);
+
+	//Сигналы Start и BusY
+	GPIO_StructInit(&Gpio_InitStruct);
+	Gpio_InitStruct.GPIO_Pin  = BusY | Start;
+	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_Init(GPIOD, &Gpio_InitStruct);
+
+	//Настройка параллельной шины (Data [0...11] и DataRdy, выходы)
+	GPIO_StructInit(&Gpio_InitStruct);
+	Gpio_InitStruct.GPIO_Pin  = OutMask;
+	Gpio_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
+	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_Init(GPIOE, &Gpio_InitStruct);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

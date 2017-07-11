@@ -8,14 +8,22 @@ void DMA2_Stream0_IRQHandler(void)
 {
 	if(DMA_GetITStatus(DMA2_Stream0, DMA_IT_HTIF0))
 	{
-		//Send_Data_to_Ethernet(Current_PCB, &Buffer_to_send_from_SPI1, Buffer_Lenght);
-		//Send_Data_to_Ethernet(Current_PCB, &Buffer_to_send_from_SPI2, Buffer_Lenght);
-		//Send_Data_to_Ethernet(Current_PCB, &Buffer_to_send_from_SPI3, Buffer_Lenght);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI1[i]);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI2[i]);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI3[i]);
+
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_HTIF0);
 	}else {
-		//Send_Data_to_Ethernet(Current_PCB, (uint32_t)&Buffer_to_send_from_SPI1 + Buffer_Lenght, Buffer_Lenght);
-		//Send_Data_to_Ethernet(Current_PCB, (uint32_t)&Buffer_to_send_from_SPI2 + Buffer_Lenght, Buffer_Lenght);
-		//Send_Data_to_Ethernet(Current_PCB, (uint32_t)&Buffer_to_send_from_SPI3 + Buffer_Lenght, Buffer_Lenght);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI1[i]+Buffer_Lenght/2);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI2[i] + Buffer_Lenght/2);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Buffer_to_send_from_SPI3[i] + Buffer_Lenght/2);
+
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_TCIF0);
 	}
 }

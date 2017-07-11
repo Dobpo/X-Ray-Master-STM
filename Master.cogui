@@ -18,17 +18,22 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="tcp_echoserver.c" partName="tcp_echoserver.c" path="G:/Projects/STM32F4/Master/Ethernet/source/tcp_echoserver.c" title="tcp_echoserver.c" tooltip="G:/Projects/STM32F4/Master/Ethernet/source/tcp_echoserver.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Ethernet/src/tcp_echoserver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5309" selectionTopPixel="1757"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" title="main.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="47" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="tcp_echoserver.h" partName="tcp_echoserver.h" path="G:/Projects/STM32F4/Master/Ethernet/include/tcp_echoserver.h" title="tcp_echoserver.h" tooltip="G:/Projects/STM32F4/Master/Ethernet/include/tcp_echoserver.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Ethernet/inc/tcp_echoserver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1387" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" partName="Periph_Conf.h" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.h" title="Periph_Conf.h" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Periph_Conf.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1241" selectionTopPixel="285"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" partName="Periph_Conf.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" title="Periph_Conf.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Periph_Conf.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7239" selectionTopPixel="2910"/>
 </editor>
 </editors>
 <views>
@@ -73,20 +78,13 @@
 <viewState/>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="23">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/Master"/>
 <element path="/Master/cmsis"/>
-<element path="/Master/cmsis_boot"/>
-<element path="/Master/Eth_Drivers"/>
-<element path="/Master/Eth_Drivers/src"/>
-<element path="/Master/Ethernet"/>
-<element path="/Master/Ethernet/inc"/>
-<element path="/Master/Ethernet/src"/>
-<element path="/Master/syscals"/>
 </expanded>
 <selection>
-<element path="/Master/main.h"/>
+<element path="/Master/Periph_Conf.c"/>
 </selection>
 </viewState>
 </view>
@@ -100,11 +98,11 @@
 <viewState/>
 </view>
 <view id="org.coocox.coassistant.view.CoAssistantView" partName="Peripherals">
-<viewState horizontalPosition="0" verticalPosition="48">
+<viewState horizontalPosition="0" verticalPosition="0">
 <selection>
-<element name="EXTI"/>
+<element name="OTG_FS_PWRCLK"/>
 </selection>
-<registerValues baseAddress="Base Address: 0x40013C00" description="Description:  External interrupt/event&#x0A;      controller"/>
+<registerValues baseAddress="Base Address: 0x50000E00" description="Description:  USB on the go full speed"/>
 </viewState>
 </view>
 </views>
@@ -311,166 +309,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Ethernet/src/tcp_echoserver.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/cmsis_boot/startup/startup_stm32f4xx.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Ethernet/inc/tcp_echoserver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Ethernet/src/tcp_echoserver.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Ethernet/inc/tcp_echoserver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.c"/>
 </editors>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="1">
+<item historyLabel="Periph_Conf.h" index="0">
+<position info="not_deleted" x="601" y="9"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="915" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="215" y="7"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="915" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="215" y="7"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="915" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="1046" y="0"/>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="893" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1086" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="1">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14756" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="1046" y="0"/>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1086" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.h" index="5">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="stm32f4xx_it.c" index="4">
-<position info="not_deleted" x="3868" y="0"/>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="455" y="7"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="66" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="stm32f4xx_it.c" index="4">
-<position info="not_deleted" x="3868" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.h" index="5">
+<item historyLabel="main.c" index="1">
 <position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="1046" y="0"/>
-</item>
-<item historyLabel="main.h" index="0">
-<position info="not_deleted" x="2088" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="1046" y="0"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14756" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="750" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="7804" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.h" index="5">
-<position/>
-</item>
-<item historyLabel="tcp_echoserver.h" index="5">
-<position info="not_deleted" x="1725" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.c" index="1">
-<position info="not_deleted" x="7804" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="750" y="0"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14756" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="stm32f4xx_it.c" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14756" y="0"/>
+<item historyLabel="stm32f4xx_it.c" index="3">
+<position info="not_deleted" x="235" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="482" y="0"/>
+<item historyLabel="stm32f4xx_it.c" index="3">
+<position info="not_deleted" x="278" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="706" y="0"/>
+<item historyLabel="stm32f4xx_it.c" index="3">
+<position info="not_deleted" x="845" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="428" y="0"/>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1086" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14696" y="0"/>
+<item historyLabel="main.c" index="1">
+<position/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="6">
-<position info="not_deleted" x="7487" y="56"/>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1529" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="6">
-<position info="not_deleted" x="5263" y="11"/>
+<item historyLabel="stm32f4xx_it.h" index="4">
+<position/>
 </item>
-<item historyLabel="tcp_echoserver.h" index="7">
-<position info="not_deleted" x="1723" y="0"/>
-</item>
-<item historyLabel="tcp_echoserver.c" index="6">
-<position info="not_deleted" x="5309" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="98" y="0"/>
-</item>
-<item historyLabel="main.h" index="9">
+<item historyLabel="main.h" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="98" y="0"/>
+<item historyLabel="stm32f4xx_it.h" index="4">
+<position info="not_deleted" x="232" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="6">
-<position info="not_deleted" x="5309" y="0"/>
+<item historyLabel="main.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.h" index="7">
-<position info="not_deleted" x="1723" y="0"/>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1529" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="2">
-<position info="not_deleted" x="14696" y="0"/>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1257" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.h" index="7">
-<position info="not_deleted" x="1387" y="0"/>
+<item historyLabel="Periph_Conf.c" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="tcp_echoserver.c" index="6">
-<position info="not_deleted" x="5309" y="0"/>
+<item historyLabel="Periph_Conf.c" index="6">
+<position info="not_deleted" x="416" y="0"/>
 </item>
-<item active="true" historyLabel="tcp_echoserver.h" index="7">
-<position info="not_deleted" x="1387" y="0"/>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1257" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.c" index="6">
+<position info="not_deleted" x="416" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="47" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1241" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="47" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="2">
+<position info="not_deleted" x="1241" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.c" index="6">
+<position info="not_deleted" x="416" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="47" y="0"/>
+</item>
+<item active="true" historyLabel="Periph_Conf.c" index="6">
+<position info="not_deleted" x="416" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -479,50 +474,50 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" tooltip="Master/Periph_Conf.c">
+<persistable path="/Master/Periph_Conf.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" tooltip="Master/main.h">
 <persistable path="/Master/main.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Master/main.c">
-<persistable path="/Master/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tcp_echoserver.h" tooltip="Master/Ethernet/inc/tcp_echoserver.h">
-<persistable path="/Master/Ethernet/inc/tcp_echoserver.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tcp_echoserver.c" tooltip="Master/Ethernet/src/tcp_echoserver.c">
-<persistable path="/Master/Ethernet/src/tcp_echoserver.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="Master/cmsis_boot/startup/startup_stm32f4xx.c">
-<persistable path="/Master/cmsis_boot/startup/startup_stm32f4xx.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" tooltip="Master/Periph_Conf.c">
-<persistable path="/Master/Periph_Conf.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" tooltip="Master/stm32f4xx_it.h">
+<persistable path="/Master/stm32f4xx_it.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="Master/stm32f4xx_it.c">
 <persistable path="/Master/stm32f4xx_it.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4x7_eth.c" tooltip="Master/Eth_Drivers/src/stm32f4x7_eth.c">
-<persistable path="/Master/Eth_Drivers/src/stm32f4x7_eth.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" tooltip="Master/Periph_Conf.h">
+<persistable path="/Master/Periph_Conf.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ethernetif.c" tooltip="Master/Eth_Drivers/src/ethernetif.c">
-<persistable path="/Master/Eth_Drivers/src/ethernetif.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm4.h" tooltip="Master/cmsis/core_cm4.h">
+<persistable path="/Master/cmsis/core_cm4.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="temp.h" tooltip="Master/Ethernet/inc/temp.h">
-<persistable path="/Master/Ethernet/inc/temp.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="Master/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/Master/cmsis_lib/include/stm32f4xx_gpio.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4x7_eth_conf.h" tooltip="Master/Ethernet/inc/stm32f4x7_eth_conf.h">
-<persistable path="/Master/Ethernet/inc/stm32f4x7_eth_conf.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Master/main.c">
+<persistable path="/Master/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4x7_eth_bsp.h" tooltip="Master/Ethernet/inc/stm32f4x7_eth_bsp.h">
-<persistable path="/Master/Ethernet/inc/stm32f4x7_eth_bsp.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_syscfg.h" tooltip="Master/cmsis_lib/include/stm32f4xx_syscfg.h">
+<persistable path="/Master/cmsis_lib/include/stm32f4xx_syscfg.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="netconf.h" tooltip="Master/Ethernet/inc/netconf.h">
-<persistable path="/Master/Ethernet/inc/netconf.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="syscalls.c" tooltip="Master/syscals/syscalls.c">
+<persistable path="/Master/syscals/syscalls.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="netconf.c" tooltip="Master/Ethernet/src/netconf.c">
-<persistable path="/Master/Ethernet/src/netconf.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4_discovery.c" tooltip="Master/stm32f4_discovery.c">
+<persistable path="/Master/stm32f4_discovery.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4x7_eth_bsp.c" tooltip="Master/Ethernet/src/stm32f4x7_eth_bsp.c">
-<persistable path="/Master/Ethernet/src/stm32f4x7_eth_bsp.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Slave/main.c">
+<persistable path="/Slave/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" tooltip="Slave/Periph_Conf.c">
+<persistable path="/Slave/Periph_Conf.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" tooltip="Slave/Periph_Conf.h">
+<persistable path="/Slave/Periph_Conf.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="Master/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/Master/cmsis_lib/include/stm32f4xx_gpio.h"/>
 </file>
 </mruList>
 </workbench>

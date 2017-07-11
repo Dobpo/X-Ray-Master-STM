@@ -1,81 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <breakpoints>
 <breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/main.c" type="1"/>
-<marker lineNumber="27" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<resource path="/" type="8"/>
+<marker lineNumber="54" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
 <attrib name="enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
 <attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
 <attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
 <attrib name="persistant" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
 <attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: main.c [line: 28]"/>
+<attrib name="message" value="Line breakpoint: math.h [line: 55]"/>
 <attrib name="registered" value="true"/>
-<attrib name="path" value="/Master/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Work_Kravchenko\Projects\STM32_APP\Master\main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/Ethernet/src/tcp_echoserver.c" type="1"/>
-<marker lineNumber="231" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: tcp_echoserver.c [line: 242]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/Master/Ethernet/src/tcp_echoserver.c"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="F:\Work_Kravchenko\Projects\ETHERNET_+\Master\Ethernet\source\tcp_echoserver.c"/>
+<attrib name="path" value="/"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:\Users\Marcin\Desktop\bmp library\math.h"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/Ethernet/src/tcp_echoserver.c" type="1"/>
-<marker lineNumber="244" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
+<breakpoint enabled="false" persistant="true" registered="true">
+<resource path="/" type="8"/>
+<marker charStart="-1" lineNumber="-1" type="org.eclipse.cdt.debug.core.cAddressBreakpointMarker">
+<attrib name="enabled" value="false"/>
 <attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.address" value="0x00000000080002d0"/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
 <attrib name="workingset_name" value=""/>
 <attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cAddressBreakpointMarker"/>
 <attrib name="persistant" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
 <attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: tcp_echoserver.c [line: 254]"/>
+<attrib name="message" value="Address breakpoint:  [address: 0x00000000080002d0]"/>
 <attrib name="registered" value="true"/>
-<attrib name="path" value="/Master/Ethernet/src/tcp_echoserver.c"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="F:\Work_Kravchenko\Projects\ETHERNET_+\Master\Ethernet\source\tcp_echoserver.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="charStart" value="-1"/>
+<attrib name="path" value="/"/>
+<attrib name="charEnd" value="-1"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="false"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master" type="4"/>
-<marker lineNumber="28" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<resource path="/" type="8"/>
+<marker lineNumber="55" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
 <attrib name="enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
 <attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
 <attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
 <attrib name="persistant" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
 <attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: main.c [line: 28]"/>
+<attrib name="message" value="Line breakpoint: math.h [line: 55]"/>
 <attrib name="registered" value="true"/>
-<attrib name="path" value="/Master"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
+<attrib name="path" value="/"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:\Users\Marcin\Desktop\bmp library\math.h"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
@@ -96,28 +76,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/main.c" type="1"/>
-<marker lineNumber="27" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: main.c [line: 28]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/Master/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="F:\Work_Kravchenko\Projects\ETHERNET_+\Master\main.c"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -136,28 +96,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/Ethernet/src/tcp_echoserver.c" type="1"/>
-<marker lineNumber="215" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: tcp_echoserver.c [line: 228]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/Master/Ethernet/src/tcp_echoserver.c"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="F:\Work_Kravchenko\Projects\ETHERNET_+\Master\Ethernet\source\tcp_echoserver.c"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -176,8 +116,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -196,8 +136,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -216,8 +156,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -236,8 +176,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -256,8 +196,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -276,8 +216,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -296,8 +236,28 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/Master" type="4"/>
+<marker lineNumber="28" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<attrib name="enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="persistant" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+<attrib name="message" value="Line breakpoint: main.c [line: 28]"/>
+<attrib name="registered" value="true"/>
+<attrib name="path" value="/Master"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -316,8 +276,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -336,22 +296,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/Master"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Work_Kravchenko/Projects/STM32_APP/Master/main.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/Master/Ethernet/src/tcp_echoserver.c" type="1"/>
-<marker lineNumber="231" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="message" value="Line breakpoint: tcp_echoserver.c [line: 231]"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="G:\Projects\STM32F4\Master\Ethernet\source\tcp_echoserver.c"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
 </marker>
 </breakpoint>
 </breakpoints>

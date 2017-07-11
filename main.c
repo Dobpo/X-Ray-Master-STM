@@ -1,40 +1,30 @@
 #include "main.h"
+#include "Periph_Conf.h"
 
-/* Private define ------------------------------------------------------------*/
-#define SYSTEMTICK_PERIOD_MS  10
-
-/* Private variables ---------------------------------------------------------*/
-__IO uint32_t LocalTime = 0; /* this variable is used to create a time reference incremented by 10ms */
-uint32_t timingdelay;
-/**
-  * @brief  Main program.
-  */
 int main(void)
 {
 	SystemInit(); Init_CKc_CKr(); Start_Pulse(); Stop_Pulse();
-	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();
-
+	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();Init_pData_Bus();
 
 	/* Infinite loop */
 	while (1)
 	{
+		GPIOE->BSRRH = RDY;       //  DataRdy = 0  (Начальный уровень)
+		GPIOD->BSRRL = Led_Red;   // Включаем красный светодиод
 
+		rdStart = (GPIOD->IDR & Start);  // Ждем низкий уровень Start
+		while (rdStart != 0) rdStart = (GPIOD->IDR & Start);
+
+		GPIOD->BSRRH = Led_Red;          // Выключаем красный светодиод
+		GPIOD->BSRRL = Led_Orange;       // Включаем оранжевый светодиод
+
+		rdStart = GPIOD->IDR & Start;    // Ждем Высокий уровень Start
+		while (rdStart == 0) rdStart = GPIOD->IDR & Start;
+
+		GPIOD->BSRRH = Led_Orange;  // Выключаем оранжевый светодиод
+		GPIOD->BSRRL = Led_Green;   // Включаем  зеленый светодиод
+
+		Start_Pulse();
 	}
   return 0;
-}
-
-/**
-  * @brief  Inserts a delay time.
-  * @param  nCount: number of 10ms periods to wait for.
-  * @retval None
-  */
-void Delay(uint32_t nCount)
-{
-  /* Capture the current local time */
-  timingdelay = LocalTime + nCount;
-
-  /* wait until the desired delay finish */
-  while(timingdelay > LocalTime)
-  {
-  }
 }
