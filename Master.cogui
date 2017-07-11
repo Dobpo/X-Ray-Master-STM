@@ -20,21 +20,35 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" title="main.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" title="main.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="299" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="197" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" partName="main.h" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.h" title="main.h" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/main.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/main.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" partName="Periph_Conf.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" title="Periph_Conf.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Periph_Conf.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" partName="stm32f4xx_it.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/stm32f4xx_it.c" title="stm32f4xx_it.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/stm32f4xx_it.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/stm32f4xx_it.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" partName="stm32f4xx_it.h" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/stm32f4xx_it.h" title="stm32f4xx_it.h" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/stm32f4xx_it.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/stm32f4xx_it.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" partName="Periph_Conf.h" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.h" title="Periph_Conf.h" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Periph_Conf.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1550" selectionTopPixel="302"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" partName="Periph_Conf.c" path="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" title="Periph_Conf.c" tooltip="E:/Projects/X-Ray-Lines/X-Ray-Master-STM/Periph_Conf.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Master/Periph_Conf.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="529" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -73,7 +87,7 @@
 </view>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState>
-<ExpressionKeySet ExpKeys="testVar,"/>
+<ExpressionKeySet ExpKeys="Buffer_to_send_from_SPI1,Transaction_Count,"/>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
@@ -100,7 +114,7 @@
 <viewState/>
 </view>
 <view id="org.coocox.coassistant.view.CoAssistantView" partName="Peripherals">
-<viewState horizontalPosition="0" verticalPosition="42">
+<viewState horizontalPosition="0" verticalPosition="50">
 <selection>
 <element name="OTG_FS_PWRCLK"/>
 </selection>
@@ -191,7 +205,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44955158" ratioLeft="401" ratioRight="491" relationship="4" relative="org.eclipse.ui.internal.ViewStack@4ae78b"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@302302" ratio="0.36995515" ratioLeft="330" ratioRight="562" relationship="4" relative="org.eclipse.ui.internal.ViewStack@9c5f3b">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@302302" ratio="0.4920635" ratioLeft="341" ratioRight="352" relationship="4" relative="org.eclipse.ui.internal.ViewStack@9c5f3b">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -244,8 +258,8 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.coocox.builder.ui.build"/>
 <hide_toolbar_item_id id="org.coocox.welcome.ui.action.welcome"/>
-<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <hide_toolbar_item_id id="org.coocox.codebugger.configuration.coideProgramDownloadAction"/>
+<hide_toolbar_item_id id="org.coocox.component.ui.ShowRepositoryAction"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
@@ -288,7 +302,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1eca408" ratio="0.36012608" ratioLeft="457" ratioRight="812" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1adb789">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
 <page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
@@ -328,13 +342,15 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/cmsis_boot/startup/startup_stm32f4xx.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/Periph_Conf.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Master/stm32f4xx_it.h"/>
 </editors>
 <item historyLabel="main.c" index="0">
 <position/>
@@ -345,143 +361,146 @@
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1086" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="455" y="7"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="66" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
 <position/>
+</item>
+<item historyLabel="Periph_Conf.h" index="4">
+<position/>
+</item>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="51" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="4">
+<position info="not_deleted" x="1056" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
 <item historyLabel="stm32f4xx_it.c" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="564" y="42"/>
 </item>
-<item historyLabel="stm32f4xx_it.c" index="2">
-<position info="not_deleted" x="235" y="0"/>
-</item>
-<item historyLabel="stm32f4xx_it.c" index="2">
-<position info="not_deleted" x="278" y="0"/>
-</item>
-<item historyLabel="stm32f4xx_it.c" index="2">
-<position info="not_deleted" x="845" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1086" y="0"/>
+<item historyLabel="startup_stm32f4xx.c" index="3">
+<position info="not_deleted" x="14756" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1529" y="0"/>
-</item>
-<item historyLabel="stm32f4xx_it.h" index="3">
-<position/>
-</item>
-<item historyLabel="main.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="stm32f4xx_it.h" index="3">
-<position info="not_deleted" x="232" y="0"/>
-</item>
-<item historyLabel="main.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1529" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1257" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="416" y="0"/>
+<item historyLabel="stm32f4xx_it.c" index="2">
+<position info="not_deleted" x="564" y="42"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1257" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="416" y="0"/>
+<item historyLabel="Periph_Conf.h" index="4">
+<position info="not_deleted" x="1368" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="7761" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="47" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1241" y="0"/>
+<position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="47" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.h" index="1">
-<position info="not_deleted" x="1241" y="0"/>
-</item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="416" y="0"/>
+<position/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="47" y="0"/>
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="416" y="0"/>
+<item historyLabel="Periph_Conf.c" index="1">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="6">
-<position info="not_deleted" x="1283" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="47" y="0"/>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="537" y="0"/>
 </item>
-<item historyLabel="Periph_Conf.h" index="6">
-<position info="not_deleted" x="1110" y="17"/>
+<item historyLabel="startup_stm32f4xx.c" index="3">
+<position info="not_deleted" x="14756" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="200" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="6">
-<position info="not_deleted" x="1110" y="17"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="7338" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="6">
-<position info="not_deleted" x="1550" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="73" y="9"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="332" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="200" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.h" index="6">
-<position info="not_deleted" x="1550" y="0"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="Periph_Conf.c" index="5">
-<position info="not_deleted" x="529" y="0"/>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="541" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="918" y="0"/>
+<item historyLabel="stm32f4xx_it.c" index="2">
+<position info="not_deleted" x="174" y="0"/>
 </item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="66" y="0"/>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="308" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="7">
-<position info="not_deleted" x="457" y="0"/>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="489" y="17"/>
+</item>
+<item historyLabel="Periph_Conf.c" index="1">
+<position info="not_deleted" x="537" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="5">
+<position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="main.h" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.c" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_it.c" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_it.h" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Periph_Conf.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Periph_Conf.c" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -490,11 +509,8 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" tooltip="Master/Periph_Conf.c">
-<persistable path="/Master/Periph_Conf.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" tooltip="Master/main.h">
-<persistable path="/Master/main.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" tooltip="Master/Periph_Conf.h">
+<persistable path="/Master/Periph_Conf.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" tooltip="Master/stm32f4xx_it.h">
 <persistable path="/Master/stm32f4xx_it.h"/>
@@ -502,8 +518,14 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="Master/stm32f4xx_it.c">
 <persistable path="/Master/stm32f4xx_it.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.h" tooltip="Master/Periph_Conf.h">
-<persistable path="/Master/Periph_Conf.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Periph_Conf.c" tooltip="Master/Periph_Conf.c">
+<persistable path="/Master/Periph_Conf.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.h" tooltip="Master/main.h">
+<persistable path="/Master/main.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="Master/cmsis_boot/startup/startup_stm32f4xx.c">
+<persistable path="/Master/cmsis_boot/startup/startup_stm32f4xx.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm4.h" tooltip="Master/cmsis/core_cm4.h">
 <persistable path="/Master/cmsis/core_cm4.h"/>
