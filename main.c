@@ -7,6 +7,7 @@ int main(void)
 
 	SystemInit();Init_pData_Bus(); Init_CKc_CKr();
 	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();
+	Fill_test_buffers();
 	/* Infinite loop */
 	while (1)
 	{

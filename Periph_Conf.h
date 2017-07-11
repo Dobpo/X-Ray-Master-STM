@@ -34,6 +34,11 @@ uint16_t Buffer_to_send_from_SPI1[Buffer_Lenght];
 uint16_t Buffer_to_send_from_SPI2[Buffer_Lenght];
 uint16_t Buffer_to_send_from_SPI3[Buffer_Lenght];
 
+//Для тестирования передачи по Ethernet
+uint16_t Test_Buffer_1[Buffer_Lenght];
+uint16_t Test_Buffer_2[Buffer_Lenght];
+uint16_t Test_Buffer_3[Buffer_Lenght];
+
 //Main clock
 void Init_CKc_CKr(void);
 void Start_Pulse(void);
@@ -47,6 +52,8 @@ void Init_EXTI_12(void);
 //Data bus
 void Init_pData_Bus(void);
 void Send_Data(uint16_t data);
+//For test
+void Fill_test_buffers(void);
 
 #ifdef __cplusplus
 }

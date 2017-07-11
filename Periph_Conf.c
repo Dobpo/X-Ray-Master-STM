@@ -1,5 +1,13 @@
 #include "Periph_Conf.h"
 
+void Fill_test_buffers(void){
+	for(int i = 0; i< Buffer_Lenght; i++){
+		Test_Buffer_1[i] = 0;
+		Test_Buffer_2[i] = 2048;
+		Test_Buffer_3[i] = 4096;
+	}
+}
+
 unsigned int rdStart;
 
 /* Отправка одного слова данных

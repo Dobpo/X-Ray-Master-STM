@@ -7,21 +7,33 @@ void DMA2_Stream0_IRQHandler(void)
 {
 	if(DMA_GetITStatus(DMA2_Stream0, DMA_IT_HTIF0))
 	{
-		for	(int i = 0; i < Buffer_Lenght/2; i++)
+		/*for	(int i = 0; i < Buffer_Lenght/2; i++)
 			Send_Data(Buffer_to_send_from_SPI1[i]);
 		for	(int i = 0; i < Buffer_Lenght/2; i++)
 			Send_Data(Buffer_to_send_from_SPI2[i]);
 		for	(int i = 0; i < Buffer_Lenght/2; i++)
-			Send_Data(Buffer_to_send_from_SPI3[i]);
+			Send_Data(Buffer_to_send_from_SPI3[i]);*/
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Test_Buffer_1[i]);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Test_Buffer_2[i]);
+		for	(int i = 0; i < Buffer_Lenght/2; i++)
+			Send_Data(Test_Buffer_3[i]);
 
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_HTIF0);
 	}else {
-		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+		/*for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
 			Send_Data(Buffer_to_send_from_SPI1[i]);
 		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
 			Send_Data(Buffer_to_send_from_SPI2[i]);
 		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
-			Send_Data(Buffer_to_send_from_SPI3[i]);
+			Send_Data(Buffer_to_send_from_SPI3[i]);*/
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Test_Buffer_1[i]);
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Test_Buffer_2[i]);
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Test_Buffer_3[i]);
 
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_TCIF0);
 	}
