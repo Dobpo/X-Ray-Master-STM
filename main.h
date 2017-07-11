@@ -8,7 +8,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx.h"
-#include "Periph_Conf.h"
 
 #ifdef __cplusplus
 }

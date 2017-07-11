@@ -3,9 +3,11 @@
 
 int main(void)
 {
-	SystemInit(); Init_CKc_CKr(); Start_Pulse(); Stop_Pulse();
-	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();Init_pData_Bus();
+	unsigned int rdStart;
 
+	SystemInit();Init_pData_Bus(); Init_CKc_CKr();
+	Init_SPIs(); Init_DMA_Streams(); Init_EXTI_for_DMA();
+	Transaction_Count = 0;
 	/* Infinite loop */
 	while (1)
 	{
@@ -22,9 +24,10 @@ int main(void)
 		while (rdStart == 0) rdStart = GPIOD->IDR & Start;
 
 		GPIOD->BSRRH = Led_Orange;  // Выключаем оранжевый светодиод
-		GPIOD->BSRRL = Led_Green;   // Включаем  зеленый светодиод
 
+		Transaction_Count = 0;
 		Start_Pulse();
+		while(DataIsSending);
 	}
   return 0;
 }

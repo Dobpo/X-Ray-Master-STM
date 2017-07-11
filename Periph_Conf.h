@@ -27,7 +27,8 @@
 #define SPI3_DR_Address 0x40003C0C
 
 volatile unsigned int Data;
-volatile unsigned int rdStart;
+volatile unsigned int DataIsSending;
+volatile unsigned int Transaction_Count;
 
 uint16_t Buffer_to_send_from_SPI1[Buffer_Lenght];
 uint16_t Buffer_to_send_from_SPI2[Buffer_Lenght];

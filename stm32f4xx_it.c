@@ -1,5 +1,4 @@
 #include "stm32f4xx_it.h"
-#include "main.h"
 
 /* Обработчик прерываний для DMA2_Stream0
  *
@@ -17,12 +16,12 @@ void DMA2_Stream0_IRQHandler(void)
 
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_HTIF0);
 	}else {
-		for	(int i = 0; i < Buffer_Lenght/2; i++)
-			Send_Data(Buffer_to_send_from_SPI1[i]+Buffer_Lenght/2);
-		for	(int i = 0; i < Buffer_Lenght/2; i++)
-			Send_Data(Buffer_to_send_from_SPI2[i] + Buffer_Lenght/2);
-		for	(int i = 0; i < Buffer_Lenght/2; i++)
-			Send_Data(Buffer_to_send_from_SPI3[i] + Buffer_Lenght/2);
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Buffer_to_send_from_SPI1[i]);
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Buffer_to_send_from_SPI2[i]);
+		for	(int i = Buffer_Lenght/2; i < Buffer_Lenght; i++)
+			Send_Data(Buffer_to_send_from_SPI3[i]);
 
 		DMA_ClearITPendingBit(DMA2_Stream0, DMA_IT_TCIF0);
 	}

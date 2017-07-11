@@ -1,15 +1,22 @@
 #include "Periph_Conf.h"
 
+unsigned int rdStart;
+
 /* Отправка одного слова данных
  * */
 void Send_Data(uint16_t data){
-	GPIOE->BSRRH = OutMask;    // Чистим линии данных
+	if(Transaction_Count < 0x00510000){
+	GPIOE->BSRRH = OutMask;   		// Чистим линии данных
 	Data = (data << 4) | RDY;
 
 	rdStart = GPIOD->IDR & BusY;    // Ждем низкий уровень BusY
 	while (rdStart != 0) rdStart = GPIOD->IDR & BusY;
-	GPIOE->BSRRL = Data; // Устанавливаем данные на линии
-	GPIOE->BSRRH = RDY;        //  DataRdy = 0 (Защелкиваем данные)
+	GPIOE->BSRRL = Data; 			// Устанавливаем данные на линии
+	GPIOE->BSRRH = RDY;      	    //  DataRdy = 0 (Защелкиваем данные)
+	Transaction_Count++;
+	}else{
+		Stop_Pulse();
+	}
 }
 
 /* Инициализация SPIx (1,2,3) для приема данных
@@ -203,6 +210,9 @@ void Start_Pulse(void){
 
 	TIM10->CR1 |= TIM_CR1_CEN;
 	TIM11->CR1 |= TIM_CR1_CEN;
+
+	DataIsSending  = 0;
+	GPIOD->BSRRL = Led_Green;   // Включаем  зеленый светодиод
 }
 
 /* Остановка тактирования CKc & CKr.
@@ -210,6 +220,8 @@ void Start_Pulse(void){
 void Stop_Pulse(void){
 	TIM10->CR1 &= (uint16_t)~TIM_CR1_CEN;
 	TIM11->CR1 &= (uint16_t)~TIM_CR1_CEN;
+	DataIsSending  = 1;
+	GPIOD->BSRRH = Led_Green;   // Выключаем  зеленый светодиод
 }
 
 /* Иниц. портов PE и PD для использования в виде паралельной шины данных
