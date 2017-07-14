@@ -45,8 +45,7 @@ void Start_Pulse(void);
 void Stop_Pulse(void);
 //SPI
 void Init_SPIs(void);
-void Init_DMA_Streams(void);
-void Init_EXTI_for_DMA(void);
+void Init_DMA(void);
 //EXTI
 void Init_EXTI_12(void);
 //Data bus

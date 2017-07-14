@@ -1,13 +1,5 @@
 #include "Periph_Conf.h"
 
-void Fill_test_buffers(void){
-	for(int i = 0; i< Buffer_Lenght; i++){
-		Test_Buffer_1[i] = 0;
-		Test_Buffer_2[i] = 2048;
-		Test_Buffer_3[i] = 4096;
-	}
-}
-
 unsigned int rdStart;
 
 /* Отправка одного слова данных
@@ -46,26 +38,22 @@ void Init_SPIs(void)
 		 MOSI: | PB5  | PB15 | PC12
 	*/
 	GPIO_StructInit(&GPIO_InitStruct);
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_10
-			| GPIO_Pin_14 | GPIO_Pin_15;
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_10 | GPIO_Pin_15;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_DOWN;
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStruct);
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12;
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_12;
 	GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 	/*Configure GPIO pin alternate function SPI1:*/
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI1);
-	GPIO_PinAFConfig(GPIOB, GPIO_PinSource4, GPIO_AF_SPI1);
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI1);
 	/*Configure GPIO pin alternate function SPI2:*/
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_SPI2);
-	GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
 	/*Configure GPIO pin alternate function SPI3:*/
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_SPI3);
-	GPIO_PinAFConfig(GPIOC, GPIO_PinSource11, GPIO_AF_SPI3);
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource12, GPIO_AF_SPI3);
 
 
@@ -96,9 +84,10 @@ void Init_SPIs(void)
  * в буфферы.
  *
  */
-void Init_DMA_Streams(void)
+void Init_DMA(void)
 {
 	DMA_InitTypeDef DMA_InitStruct;
+	NVIC_InitTypeDef Nvic_Initstruct;
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2 | RCC_AHB1Periph_DMA1, ENABLE);
 
@@ -128,28 +117,14 @@ void Init_DMA_Streams(void)
 	DMA_Cmd(DMA1_Stream3, ENABLE);
 
 
+	//Прерывание DMA по половине заполнения буффера
 	DMA_ITConfig(DMA2_Stream0, DMA_IT_HT | DMA_IT_TC, ENABLE);
-	//DMA_ITConfig(DMA1_Stream2, DMA_IT_HT | DMA_IT_TC, ENABLE);
-	//DMA_ITConfig(DMA1_Stream3, DMA_IT_HT | DMA_IT_TC, ENABLE);
-}
-
-/* Инициализация обр. прерываний для половинного и полного
- * заполнения буфферов через DMA.
- *
- */
-void Init_EXTI_for_DMA(void)
-{
-	NVIC_InitTypeDef Nvic_Initstruct;
 
 	Nvic_Initstruct.NVIC_IRQChannel = DMA2_Stream0_IRQn;
  	Nvic_Initstruct.NVIC_IRQChannelPreemptionPriority = 0x01;
  	Nvic_Initstruct.NVIC_IRQChannelSubPriority = 0x01;
  	Nvic_Initstruct.NVIC_IRQChannelCmd = ENABLE;
  	NVIC_Init(&Nvic_Initstruct);
- 	/*Nvic_Initstruct.NVIC_IRQChannel = DMA1_Stream2_IRQn;
- 	NVIC_Init(&Nvic_Initstruct);
- 	Nvic_Initstruct.NVIC_IRQChannel = DMA1_Stream3_IRQn;
- 	NVIC_Init(&Nvic_Initstruct);*/
 }
 
 /* Инициализация TIM10 для генерации CKc (main clock).
