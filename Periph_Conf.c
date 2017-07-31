@@ -11,6 +11,7 @@ void Send_Data(uint16_t data){
 
 	rdStart = GPIOD->IDR & BusY;    // Ждем низкий уровень BusY
 	while (rdStart != 0) rdStart = GPIOD->IDR & BusY;
+
 	GPIOE->BSRRL = Data; 			// Устанавливаем данные на линии
 	GPIOE->BSRRH = RDY;      	    //  DataRdy = 0 (Защелкиваем данные)
 	Transaction_Count++;
@@ -35,23 +36,25 @@ void Init_SPIs(void)
 	/** SPIs GPIO Configuration
 	 *          SPI1   SPI2   SPI3
 		 SCK:  | PB3  | PB10 | PC10
-		 MOSI: | PB5  | PB15 | PC12
+		 MOSI: | PB5  | PB15(PC3) | PC12
 	*/
 	GPIO_StructInit(&GPIO_InitStruct);
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_10 | GPIO_Pin_15;
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_13;//| GPIO_Pin_10;// | GPIO_Pin_15;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_DOWN;
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStruct);
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_12;
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_10 | GPIO_Pin_12;
 	GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 	/*Configure GPIO pin alternate function SPI1:*/
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI1);
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI1);
 	/*Configure GPIO pin alternate function SPI2:*/
-	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_SPI2);
-	GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource13, GPIO_AF_SPI2);
+	//GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_SPI2);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource3, GPIO_AF_SPI2);
+	//GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
 	/*Configure GPIO pin alternate function SPI3:*/
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_SPI3);
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource12, GPIO_AF_SPI3);
@@ -224,14 +227,14 @@ void Init_pData_Bus(void){
 	//Сигналы Start и BusY
 	GPIO_StructInit(&Gpio_InitStruct);
 	Gpio_InitStruct.GPIO_Pin  = BusY | Start;
-	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_25MHz;
 	GPIO_Init(GPIOD, &Gpio_InitStruct);
 
 	//Настройка параллельной шины (Data [0...11] и DataRdy, выходы)
 	GPIO_StructInit(&Gpio_InitStruct);
 	Gpio_InitStruct.GPIO_Pin  = OutMask;
 	Gpio_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
-	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	Gpio_InitStruct.GPIO_Speed = GPIO_Speed_25MHz;
 	GPIO_Init(GPIOE, &Gpio_InitStruct);
 }
 

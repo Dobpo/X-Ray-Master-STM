@@ -26,18 +26,13 @@
 #define SPI2_DR_Address 0x4000380C
 #define SPI3_DR_Address 0x40003C0C
 
-volatile unsigned int Data;
+uint16_t Data;
 volatile unsigned int DataIsSending;
 volatile unsigned int Transaction_Count;
 
 uint16_t Buffer_to_send_from_SPI1[Buffer_Lenght];
 uint16_t Buffer_to_send_from_SPI2[Buffer_Lenght];
 uint16_t Buffer_to_send_from_SPI3[Buffer_Lenght];
-
-//Для тестирования передачи по Ethernet
-uint16_t Test_Buffer_1[Buffer_Lenght];
-uint16_t Test_Buffer_2[Buffer_Lenght];
-uint16_t Test_Buffer_3[Buffer_Lenght];
 
 //Main clock
 void Init_CKc_CKr(void);
@@ -51,8 +46,6 @@ void Init_EXTI_12(void);
 //Data bus
 void Init_pData_Bus(void);
 void Send_Data(uint16_t data);
-//For test
-void Fill_test_buffers(void);
 
 #ifdef __cplusplus
 }
