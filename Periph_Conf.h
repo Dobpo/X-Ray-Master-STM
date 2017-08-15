@@ -46,6 +46,11 @@ void Init_EXTI_12(void);
 //Data bus
 void Init_pData_Bus(void);
 void Send_Data(uint16_t data);
+//Test transfer data
+uint16_t Buffer1[Buffer_Lenght];
+uint16_t Buffer2[Buffer_Lenght];
+uint16_t Buffer3[Buffer_Lenght];
+void Fill_Test_Data(int k);
 
 #ifdef __cplusplus
 }

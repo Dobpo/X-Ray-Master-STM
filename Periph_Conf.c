@@ -1,5 +1,30 @@
 #include "Periph_Conf.h"
 
+//Заполнение тестовых данных в тест буфферы
+void Fill_Test_Data(int k){
+	if (k == 1){
+		for (int i = 0; i<256; i++){
+			Buffer1[i] = 0;
+			Buffer1[i + 256] = 511;
+			Buffer1[i + 512] = 1023;
+			Buffer2[i] = 1535;
+			Buffer2[i + 256] = 2047;
+			Buffer2[i + 512] = 2559;
+			Buffer3[i] = 3071;
+			Buffer3[i + 256] = 3583;
+			Buffer3[i + 512] = 4095;
+		}
+	}else if (k == 2) {
+		for(int i = 0; i<Buffer_Lenght; i++){
+			Buffer1[i] = 0;
+			Buffer2[i] = 2047;
+			Buffer3[i] = 4095;
+		}
+	}else{
+		break;
+	}
+}
+
 unsigned int rdStart;
 
 /* Отправка одного слова данных
@@ -8,6 +33,7 @@ void Send_Data(uint16_t data){
 	if(Transaction_Count < 0x00510000){
 	GPIOE->BSRRH = OutMask;   		// Чистим линии данных
 	Data = (data << 4) | RDY;
+
 
 	rdStart = GPIOD->IDR & BusY;    // Ждем низкий уровень BusY
 	while (rdStart != 0) rdStart = GPIOD->IDR & BusY;

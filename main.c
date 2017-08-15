@@ -7,6 +7,9 @@ int main(void)
 
 	SystemInit();Init_pData_Bus(); Init_CKc_CKr(); Init_SPIs(); Init_DMA();
 
+	//“ест на правильную передачу пакетов
+	//Fill_Test_Data(1);
+
 	/* Infinite loop */
 	while (1)
 	{
